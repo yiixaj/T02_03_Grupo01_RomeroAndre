@@ -69,9 +69,9 @@ src/main/resources/application.properties
 
 **Ejemplo de configuración:**
 ```properties
-spring.datasource.url=jdbc:mysql://localhost:3306/minimercado?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
-spring.datasource.username=root
-spring.datasource.password=tu_contraseña
+spring.datasource.url=jdbc:mysql://localhost:3306/minimercado?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC (puerto usado 3307)
+spring.datasource.username=root (admin)
+spring.datasource.password=tu_contraseña (12345)
 ```
 
 ### 3. Compila e instala dependencias:
