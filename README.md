@@ -52,3 +52,60 @@ Cada entidad dispone de un CRUD completo expuesto como servicios REST, documenta
 
 ```sql
 CREATE DATABASE minimercado;
+# Configuración
+
+## Instalación
+
+### 1. Clona el repositorio:
+```bash
+git clone https://github.com/tu-usuario/sgm.git
+cd sgm
+```
+
+### 2. Configura tus credenciales de MySQL en el archivo:
+```
+src/main/resources/application.properties
+```
+
+**Ejemplo de configuración:**
+```properties
+spring.datasource.url=jdbc:mysql://localhost:3306/minimercado?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+spring.datasource.username=root
+spring.datasource.password=tu_contraseña
+```
+
+### 3. Compila e instala dependencias:
+```bash
+./mvnw clean install -DskipTests
+```
+
+### 4. Ejecuta el proyecto:
+```bash
+./mvnw spring-boot:run
+```
+
+## 🧩 Acceso a la Documentación y Pruebas
+
+Una vez en funcionamiento, accede a:
+```
+http://localhost:8080/swagger-ui/index.html
+```
+
+Desde Swagger podrás visualizar, probar y consumir todos los servicios REST implementados.
+
+## 🗄️ Base de Datos
+
+- El sistema crea automáticamente las tablas al iniciar, gracias a Hibernate.
+- Los datos se almacenan de forma persistente en la base de datos `minimercado`.
+
+## ⚠️ Notas Finales
+
+- Actualmente, el sistema no tiene autenticación implementada.
+- Para un entorno productivo, se recomienda agregar seguridad (encriptación de contraseñas, control de acceso).
+
+## ✔️ Estado Actual
+
+- ✅ Entidades principales listas
+- ✅ CRUD funcional para cada módulo
+- ✅ Documentación Swagger disponible
+- ✅ Persistencia en MySQL configurada
